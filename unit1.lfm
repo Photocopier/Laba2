@@ -1,0 +1,494 @@
+object Form1: TForm1
+  Left = 1229
+  Height = 530
+  Top = 122
+  Width = 441
+  Caption = 'Калькулятор'
+  ClientHeight = 505
+  ClientWidth = 441
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Edit1: TEdit
+    Left = 10
+    Height = 45
+    Top = 24
+    Width = 426
+    Alignment = taRightJustify
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 75
+    Top = 328
+    Width = 75
+    Caption = '1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 95
+    Height = 75
+    Top = 328
+    Width = 75
+    Caption = '2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 183
+    Height = 75
+    Top = 328
+    Width = 75
+    Caption = '3'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button4: TButton
+    Left = 8
+    Height = 75
+    Top = 248
+    Width = 75
+    Caption = '4'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button5: TButton
+    Left = 95
+    Height = 75
+    Top = 248
+    Width = 75
+    Caption = '5'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Button6: TButton
+    Left = 183
+    Height = 75
+    Top = 248
+    Width = 75
+    Caption = '6'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Button7: TButton
+    Left = 8
+    Height = 75
+    Top = 168
+    Width = 75
+    Caption = '7'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Button8: TButton
+    Left = 95
+    Height = 75
+    Top = 168
+    Width = 75
+    Caption = '8'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Button9: TButton
+    Left = 183
+    Height = 75
+    Top = 168
+    Width = 75
+    Caption = '9'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Button10: TButton
+    Left = 359
+    Height = 75
+    Top = 248
+    Width = 75
+    Caption = '1/x'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button10Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Button11: TButton
+    Left = 359
+    Height = 75
+    Top = 168
+    Width = 75
+    Caption = 'x²'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button11Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Button12: TButton
+    Left = 543
+    Height = 75
+    Top = 80
+    Width = 75
+    Caption = 'Кор'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Button13: TButton
+    Left = 271
+    Height = 75
+    Top = 248
+    Width = 75
+    Caption = '*'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickZnak
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Button14: TButton
+    Left = 271
+    Height = 75
+    Top = 328
+    Width = 75
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickZnak
+    ParentFont = False
+    TabOrder = 14
+  end
+  object Button15: TButton
+    Left = 271
+    Height = 75
+    Top = 408
+    Width = 75
+    Caption = '+'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickZnak
+    ParentFont = False
+    TabOrder = 15
+  end
+  object Button16: TButton
+    Left = 359
+    Height = 155
+    Top = 328
+    Width = 75
+    Caption = '='
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button16Click
+    ParentFont = False
+    TabOrder = 16
+  end
+  object Button17: TButton
+    Left = 183
+    Height = 75
+    Top = 408
+    Width = 75
+    Caption = ','
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 17
+  end
+  object Button18: TButton
+    Left = 95
+    Height = 75
+    Top = 408
+    Width = 75
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickBut
+    ParentFont = False
+    TabOrder = 18
+  end
+  object Button19: TButton
+    Left = 8
+    Height = 75
+    Top = 408
+    Width = 75
+    Caption = '+/-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button19Click
+    ParentFont = False
+    TabOrder = 19
+  end
+  object Button20: TButton
+    Left = 359
+    Height = 75
+    Top = 88
+    Width = 75
+    Caption = '%'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button20Click
+    ParentFont = False
+    TabOrder = 20
+  end
+  object Button21: TButton
+    Left = 95
+    Height = 75
+    Top = 88
+    Width = 75
+    Caption = 'CE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button21Click
+    ParentFont = False
+    TabOrder = 21
+  end
+  object Button22: TButton
+    Left = 183
+    Height = 75
+    Top = 88
+    Width = 75
+    Caption = 'C'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button22Click
+    ParentFont = False
+    TabOrder = 22
+  end
+  object Button23: TButton
+    Left = 8
+    Height = 75
+    Top = 88
+    Width = 75
+    Caption = '<-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button23Click
+    ParentFont = False
+    TabOrder = 23
+  end
+  object Button24: TButton
+    Left = 271
+    Height = 75
+    Top = 168
+    Width = 75
+    Caption = '/'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ClickZnak
+    ParentFont = False
+    TabOrder = 24
+  end
+  object Button25: TButton
+    Left = 271
+    Height = 75
+    Top = 88
+    Width = 75
+    Caption = '√'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Ink Free'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button25Click
+    ParentFont = False
+    TabOrder = 25
+  end
+  object MainMenu1: TMainMenu
+    left = 16
+    top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'Калькулятор'
+      object MenuItem4: TMenuItem
+        Caption = 'Копировать'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Вставить'
+        OnClick = MenuItem5Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Режим'
+      object MenuItem6: TMenuItem
+        Caption = 'Базовый'
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Расширенный'
+        OnClick = MenuItem7Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Справка'
+      object MenuItem8: TMenuItem
+        Caption = 'Справка'
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'О программе'
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'Язык'
+      object MenuItem11: TMenuItem
+        Caption = 'Русский'
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'Английский'
+      end
+    end
+  end
+end
