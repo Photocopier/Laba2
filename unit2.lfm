@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 611
+  Left = 835
   Height = 642
-  Top = 182
+  Top = 178
   Width = 542
   Caption = 'Калькулятор'
   ClientHeight = 617
@@ -175,6 +175,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button10Click
     ParentFont = False
     TabOrder = 9
   end
@@ -183,7 +184,7 @@ object Form2: TForm2
     Height = 75
     Top = 200
     Width = 75
-    Caption = 'x²'
+    Caption = '^'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -23
@@ -191,6 +192,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = ClickZnak
     ParentFont = False
     TabOrder = 10
   end
@@ -342,6 +344,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button21Click
     ParentFont = False
     TabOrder = 19
   end
@@ -358,6 +361,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button22Click
     ParentFont = False
     TabOrder = 20
   end
@@ -374,6 +378,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button23Click
     ParentFont = False
     TabOrder = 21
   end
@@ -407,6 +412,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button25Click
     ParentFont = False
     TabOrder = 23
   end
@@ -438,6 +444,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button12Click
     ParentFont = False
     TabOrder = 25
   end
@@ -454,6 +461,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button26Click
     ParentFont = False
     TabOrder = 26
   end
@@ -518,6 +526,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button30Click
     ParentFont = False
     TabOrder = 30
   end
@@ -582,6 +591,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button34Click
     ParentFont = False
     TabOrder = 34
   end

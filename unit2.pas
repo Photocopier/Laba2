@@ -5,7 +5,7 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Math;
 
 type
 
@@ -71,6 +71,7 @@ type
 
     procedure Button10Click(Sender: TObject);
     procedure Button11Click(Sender: TObject);
+    procedure Button12Click(Sender: TObject);
     procedure Button16Click(Sender: TObject);
     procedure Button19Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
@@ -78,6 +79,9 @@ type
     procedure Button22Click(Sender: TObject);
     procedure Button23Click(Sender: TObject);
     procedure Button25Click(Sender: TObject);
+    procedure Button26Click(Sender: TObject);
+    procedure Button30Click(Sender: TObject);
+    procedure Button34Click(Sender: TObject);
     procedure ClickBut(Sender: TObject);
     procedure ClickZnak(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
@@ -104,7 +108,7 @@ uses Unit1;
 
 procedure TForm2.ClickBut(Sender: TObject);
 begin
-  Edit1.Text:=Edit1.Text + (Sender as TButton).Caption; //имя кнопки = вывод в Edit
+  Form2.Edit1.Text:=Form2.Edit1.Text + (Sender as TButton).Caption; //имя кнопки = вывод в Edit
 end;
 
 procedure TForm2.ClickZnak(Sender: TObject);
@@ -112,7 +116,7 @@ begin
   //нужно сделать так, чтобы если '-' нажимается раньше цифры, то выводить его
  //if a<>null then
  a:=StrToFloat(Edit1.Text);
- Edit1.Clear;
+ Form2.Edit1.Clear;
  znak:=(Sender as TButton). Caption;
  //else b:=b;
 end;
@@ -126,12 +130,27 @@ end;
 //Копировать
 procedure TForm2.MenuItem4Click(Sender: TObject);
 begin
-    Edit1.CopyToClipboard;
+  Form2.Edit1.CopyToClipboard;
 end;
 //Вставить
 procedure TForm2.MenuItem5Click(Sender: TObject);
 begin
-    Edit1.PasteFromClipboard;
+  Form2.Edit1.PasteFromClipboard;
+end;
+
+//C
+procedure TForm2.Button22Click(Sender: TObject);
+begin
+  Edit1.Clear;
+  a:=0;
+  b:=0;
+  c:=0;
+end;
+
+// CE
+procedure TForm2.Button21Click(Sender: TObject);
+begin
+   Edit1.Clear;
 end;
 
 // %
@@ -142,22 +161,10 @@ begin
   if a<>null then
   a:=a/b*100
   else a:=b/100 ;
-  Edit1.Text:=IntToStr(round(a));
+  Form2.Edit1.Text:=IntToStr(round(a));
   a:=0;
 end;
-// CE
-procedure TForm2.Button21Click(Sender: TObject);
-begin
-  Edit1.Clear;
-end;
-// C
-procedure TForm2.Button22Click(Sender: TObject);
-begin
-  Edit1.Clear;
-  a:=0;
-  b:=0;
-  c:=0;
-end;
+
 // <-
 procedure TForm2.Button23Click(Sender: TObject);
 var
@@ -166,28 +173,44 @@ begin
   str:=Edit1.Text;
   if str <> '' then
   Delete(str, Length(str),1);
-  Edit1.Text:=str;
+  Form2.Edit1.Text:=str;
 end;
 // Корень
 procedure TForm2.Button25Click(Sender: TObject);
 begin
+a:=StrToFloat(Form2.Edit1.Text);
+a:=sqrt(a);
+Form2.Edit1.Text:=FloatToStr(a);
+a:=0;
+end;
+
+//модуль
+procedure TForm2.Button30Click(Sender: TObject);
+begin
   a:=StrToFloat(Edit1.Text);
-  a:=sqrt(a);
-  Edit1.Text:=FloatToStr(a);
+  a:=abs(a);
+  Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
+
+procedure TForm2.Button34Click(Sender: TObject);
+begin
+  Form2.Edit1.Text:=FloatToStr(a)+ '^';
+end;
+
 // =
 procedure TForm2.Button16Click(Sender: TObject);
 begin
   b:=StrToFloat(Edit1.Text);
-  Edit1.Clear;
+  Form2.Edit1.Clear;
   case znak of
   '+' : c:=a+b;
   '-' : c:=a-b;
   '*' : c:=a*b;
   '/' : c:=a/b;
+  '^' : c:=power(a,b);
   end;
-  Edit1.Text:=FloatToStr(c);
+  Form2.Edit1.Text:=FloatToStr(c);
 end;
 // -
 procedure TForm2.Button19Click(Sender: TObject);
@@ -202,20 +225,40 @@ begin
   Edit1.Text:=FloatToStr(a);
   a:=0; }
 end;
+
 // x^2
 procedure TForm2.Button11Click(Sender: TObject);
 begin
-  a:=StrToFloat(Edit1.Text);
+  a:=StrToFloat(Form2.Edit1.Text);
   a:=sqr(a);
-  Edit1.Text:=FloatToStr(a);
+  Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
+
 // 1/x
 procedure TForm2.Button10Click(Sender: TObject);
 begin
   a:=StrToFloat(Edit1.Text);
   a:=1/(a);
-  Edit1.Text:=FloatToStr(a);
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+//sin
+procedure TForm2.Button12Click(Sender: TObject);
+begin
+  a:=StrToFloat(Form2.Edit1.Text);
+  a:=sin(a);  //работает с радианами https://www.cyberforum.ru/delphi-beginners/thread7875.html
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+//cos
+procedure TForm2.Button26Click(Sender: TObject);
+begin
+  a:=StrToFloat(Edit1.Text);
+  a:=cos(a);   //работает с радианами
+  Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
 

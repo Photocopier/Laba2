@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 611
+  Left = 835
   Height = 642
-  Top = 182
+  Top = 178
   Width = 542
   Caption = 'Калькулятор'
   ClientHeight = 617
@@ -175,6 +175,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button10Click
     ParentFont = False
     TabOrder = 9
   end
@@ -183,7 +184,7 @@ object Form2: TForm2
     Height = 75
     Top = 200
     Width = 75
-    Caption = 'x²'
+    Caption = '^'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -23
@@ -191,6 +192,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = ClickZnak
     ParentFont = False
     TabOrder = 10
   end
@@ -342,6 +344,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button21Click
     ParentFont = False
     TabOrder = 19
   end
@@ -358,6 +361,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button22Click
     ParentFont = False
     TabOrder = 20
   end
@@ -374,6 +378,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button23Click
     ParentFont = False
     TabOrder = 21
   end
@@ -407,6 +412,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button25Click
     ParentFont = False
     TabOrder = 23
   end
@@ -438,6 +444,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button12Click
     ParentFont = False
     TabOrder = 25
   end
@@ -454,6 +461,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button26Click
     ParentFont = False
     TabOrder = 26
   end
@@ -518,6 +526,7 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button30Click
     ParentFont = False
     TabOrder = 30
   end
@@ -582,63 +591,120 @@ object Form2: TForm2
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
+    OnClick = Button34Click
     ParentFont = False
     TabOrder = 34
   end
   object RadioButton1: TRadioButton
-    Left = 144
-    Height = 24
+    Left = 143
+    Height = 25
     Top = 80
-    Width = 45
+    Width = 48
     Caption = 'Bin'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 35
   end
   object RadioButton2: TRadioButton
-    Left = 200
-    Height = 24
+    Left = 199
+    Height = 25
     Top = 80
-    Width = 49
+    Width = 52
     Caption = 'Trin'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 36
   end
   object RadioButton3: TRadioButton
-    Left = 256
-    Height = 24
+    Left = 255
+    Height = 25
     Top = 80
-    Width = 56
+    Width = 59
     Caption = 'Quat'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 37
   end
   object RadioButton4: TRadioButton
-    Left = 320
-    Height = 24
+    Left = 319
+    Height = 25
     Top = 80
-    Width = 42
+    Width = 45
     Caption = 'Fiv'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 38
   end
   object RadioButton5: TRadioButton
-    Left = 368
-    Height = 24
+    Left = 367
+    Height = 25
     Top = 80
-    Width = 50
+    Width = 51
     Caption = 'Hex'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 39
   end
   object RadioButton6: TRadioButton
-    Left = 424
-    Height = 24
+    Left = 423
+    Height = 25
     Top = 80
-    Width = 53
+    Width = 54
     Caption = 'Sem'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 40
   end
   object RadioButton7: TRadioButton
-    Left = 483
-    Height = 24
+    Left = 482
+    Height = 25
     Top = 80
-    Width = 47
+    Width = 48
     Caption = 'Oct'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Artifakt Element'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
     TabOrder = 41
   end
   object MainMenu1: TMainMenu
