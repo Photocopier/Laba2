@@ -5,7 +5,7 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Math;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Math,LCLTranslator;
 
 type
 
@@ -80,10 +80,17 @@ type
     procedure Button23Click(Sender: TObject);
     procedure Button25Click(Sender: TObject);
     procedure Button26Click(Sender: TObject);
+    procedure Button27Click(Sender: TObject);
+    procedure Button28Click(Sender: TObject);
     procedure Button30Click(Sender: TObject);
-    procedure Button34Click(Sender: TObject);
+    procedure Button31Click(Sender: TObject);
+    procedure Button32Click(Sender: TObject);
+    procedure Button33Click(Sender: TObject);
     procedure ClickBut(Sender: TObject);
     procedure ClickZnak(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure MenuItem11Click(Sender: TObject);
+    procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
@@ -121,11 +128,29 @@ begin
  //else b:=b;
 end;
 
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  a:=StrToFloat(Edit1.Text);
+  a:=sqr(a);
+  Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+procedure TForm2.MenuItem11Click(Sender: TObject);
+begin
+   SetDefaultLang('ru', 'lang');
+end;
+
+procedure TForm2.MenuItem12Click(Sender: TObject);
+begin
+    SetDefaultLang('en', 'lang');
+end;
+
 //Базовый
 procedure TForm2.MenuItem6Click(Sender: TObject);
 begin
   Form1.Show;
-  Form2.Hide;
+ Form2.Hide;
 end;
 //Копировать
 procedure TForm2.MenuItem4Click(Sender: TObject);
@@ -193,9 +218,20 @@ begin
   a:=0;
 end;
 
-procedure TForm2.Button34Click(Sender: TObject);
+procedure TForm2.Button32Click(Sender: TObject);
 begin
-  Form2.Edit1.Text:=FloatToStr(a)+ '^';
+  a:=StrToFloat(Edit1.Text);
+  a:=ln(a);
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+procedure TForm2.Button33Click(Sender: TObject);
+begin
+  a:=StrToFloat(Edit1.Text);
+  a:=log10(a);
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
 end;
 
 // =
@@ -261,6 +297,31 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
+
+//tg
+procedure TForm2.Button27Click(Sender: TObject);
+begin
+  a:=StrToFloat(Edit1.Text);
+  a:=sin(a)/cos(a);   //работает с радианами
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+//ctg
+procedure TForm2.Button28Click(Sender: TObject);
+begin
+  a:=StrToFloat(Edit1.Text);
+  a:=cos(a)/sin(a);   //работает с радианами
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
+end;
+
+//факториал
+procedure TForm2.Button31Click(Sender: TObject);
+  begin
+
+  end;
+
 
 end.
 

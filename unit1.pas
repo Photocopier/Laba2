@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Unit2, Math;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Unit2, Math, LCLTranslator;
 
 type
 
@@ -63,6 +63,8 @@ type
     procedure Button25Click(Sender: TObject);
     procedure ClickBut(Sender: TObject);
     procedure ClickZnak(Sender: TObject);
+    procedure MenuItem11Click(Sender: TObject);
+    procedure MenuItem12Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
@@ -96,6 +98,16 @@ begin
  Edit1.Clear;
  znak:=(Sender as TButton). Caption;
  //else b:=b;
+end;
+
+procedure TForm1.MenuItem11Click(Sender: TObject);
+begin
+  SetDefaultLang('ru', 'lang');
+end;
+
+procedure TForm1.MenuItem12Click(Sender: TObject);
+begin
+  SetDefaultLang('en', 'lang');
 end;
 
 //Копировать
