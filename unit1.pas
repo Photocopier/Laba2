@@ -5,7 +5,9 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Unit2, Math, LCLTranslator;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ActnList,
+  Menus, Buttons, ExtCtrls, Grids, LCLIntf, ComCtrls,
+  ShellAPI, Windows, Unit2, Math, LCLTranslator, Unit3, Unit4;
 
 type
 
@@ -68,6 +70,8 @@ type
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
+    procedure MenuItem8Click(Sender: TObject);
+    procedure MenuItem9Click(Sender: TObject);
   private
 
   public
@@ -125,6 +129,16 @@ procedure TForm1.MenuItem7Click(Sender: TObject);
 begin
   Form2.Show;
   Form1.Hide;
+end;
+//справка
+procedure TForm1.MenuItem8Click(Sender: TObject);
+begin
+   Form3.Show;
+end;
+//о программе
+procedure TForm1.MenuItem9Click(Sender: TObject);
+begin
+   Form4.Show;
 end;
 
 // %

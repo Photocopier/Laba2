@@ -126,71 +126,69 @@ msgid "9"
 msgstr ""
 
 #: tform1.caption
-#, fuzzy
 msgctxt "tform1.caption"
-msgid "Калькулятор"
-msgstr "Calculator"
+msgid "Calculator"
+msgstr "Калькулятор"
 
 #: tform1.menuitem1.caption
-#, fuzzy
 msgctxt "tform1.menuitem1.caption"
-msgid "Калькулятор"
-msgstr "Calculator"
+msgid "Calculator"
+msgstr "Калькулятор"
 
 #: tform1.menuitem10.caption
 msgctxt "tform1.menuitem10.caption"
-msgid "Язык"
-msgstr ""
+msgid "Language"
+msgstr "Язык"
 
 #: tform1.menuitem11.caption
 msgctxt "tform1.menuitem11.caption"
-msgid "Русский"
-msgstr ""
+msgid "Russian"
+msgstr "Русский"
 
 #: tform1.menuitem12.caption
 msgctxt "tform1.menuitem12.caption"
-msgid "Английский"
-msgstr ""
+msgid "English"
+msgstr "Английский"
 
 #: tform1.menuitem2.caption
 msgctxt "tform1.menuitem2.caption"
-msgid "Режим"
-msgstr ""
+msgid "Mode"
+msgstr "Режим"
 
 #: tform1.menuitem3.caption
 msgctxt "tform1.menuitem3.caption"
-msgid "Справка"
-msgstr ""
+msgid "Help"
+msgstr "Справка"
 
 #: tform1.menuitem4.caption
 msgctxt "tform1.menuitem4.caption"
-msgid "Копировать"
-msgstr ""
+msgid "Copy"
+msgstr "Копировать"
 
 #: tform1.menuitem5.caption
 msgctxt "tform1.menuitem5.caption"
-msgid "Вставить"
-msgstr ""
+msgid "Paste"
+msgstr "Вставить"
 
 #: tform1.menuitem6.caption
 msgctxt "tform1.menuitem6.caption"
-msgid "Базовый"
-msgstr ""
+msgid "Base"
+msgstr "Базовый"
 
 #: tform1.menuitem7.caption
 msgctxt "tform1.menuitem7.caption"
-msgid "Расширенный"
-msgstr ""
+msgid "Advanced"
+msgstr "Расширенный"
 
 #: tform1.menuitem8.caption
 msgctxt "tform1.menuitem8.caption"
-msgid "Справка"
-msgstr ""
+msgid "Help"
+msgstr "Справка"
 
 #: tform1.menuitem9.caption
 msgctxt "tform1.menuitem9.caption"
-msgid "О программе"
-msgstr ""
+msgid "About"
+msgstr "О программе"
 
 #: tform2.button1.caption
 msgctxt "tform2.button1.caption"
@@ -319,7 +317,6 @@ msgid "log"
 msgstr ""
 
 #: tform2.button34.caption
-msgctxt "tform2.button34.caption"
 msgid "^"
 msgstr ""
 
@@ -355,91 +352,67 @@ msgstr ""
 
 #: tform2.caption
 msgctxt "tform2.caption"
-msgid "Калькулятор"
-msgstr "Calculator"
+msgid "Calculator"
+msgstr "Калькулятор"
 
 #: tform2.menuitem1.caption
-#, fuzzy
-#| msgid "Calculator"
 msgctxt "tform2.menuitem1.caption"
-msgid "Калькулятор"
+msgid "Calculator"
 msgstr "Калькулятор"
 
 #: tform2.menuitem10.caption
-#, fuzzy
-#| msgid "Language"
 msgctxt "tform2.menuitem10.caption"
-msgid "Язык"
+msgid "Language"
 msgstr "Язык"
 
 #: tform2.menuitem11.caption
-#, fuzzy
-#| msgid "Russian"
 msgctxt "tform2.menuitem11.caption"
-msgid "Русский"
+msgid "Russian"
 msgstr "Русский"
 
 #: tform2.menuitem12.caption
-#, fuzzy
-#| msgid "English"
 msgctxt "tform2.menuitem12.caption"
-msgid "Английский"
+msgid "English"
 msgstr "Английский"
 
 #: tform2.menuitem2.caption
-#, fuzzy
-#| msgid "Mode"
 msgctxt "tform2.menuitem2.caption"
-msgid "Режим"
+msgid "Mode"
 msgstr "Режим"
 
 #: tform2.menuitem3.caption
-#, fuzzy
-#| msgid "Help"
 msgctxt "tform2.menuitem3.caption"
-msgid "Справка"
+msgid "Help"
 msgstr "Справка"
 
 #: tform2.menuitem4.caption
-#, fuzzy
-#| msgid "Copy"
 msgctxt "tform2.menuitem4.caption"
-msgid "Копировать"
+msgid "Copy"
 msgstr "Копировать"
 
 #: tform2.menuitem5.caption
-#, fuzzy
-#| msgid "Paste"
 msgctxt "tform2.menuitem5.caption"
-msgid "Вставить"
+msgid "Paste"
 msgstr "Вставить"
 
 #: tform2.menuitem6.caption
-#, fuzzy
-#| msgid "Base"
 msgctxt "tform2.menuitem6.caption"
-msgid "Базовый"
+msgid "Base"
 msgstr "Базовый"
 
 #: tform2.menuitem7.caption
-#, fuzzy
-#| msgid "Advanced"
 msgctxt "tform2.menuitem7.caption"
-msgid "Расширенный"
+msgid "Advanced"
 msgstr "Расширенный"
 
 #: tform2.menuitem8.caption
-#, fuzzy
-#| msgid "Help"
 msgctxt "tform2.menuitem8.caption"
-msgid "Справка"
+msgid "Help"
 msgstr "Справка"
 
 #: tform2.menuitem9.caption
-#, fuzzy
-#| msgid "About"
 msgctxt "tform2.menuitem9.caption"
-msgid "О программе"
+msgid "About"
 msgstr "О программе"
 
 #: tform2.radiobutton1.caption
@@ -469,4 +442,14 @@ msgstr ""
 #: tform2.radiobutton7.caption
 msgid "Oct"
 msgstr ""
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Help"
+msgstr "Справка"
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "About"
+msgstr "О программе"
 

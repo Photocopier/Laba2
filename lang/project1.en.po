@@ -126,79 +126,66 @@ msgid "9"
 msgstr ""
 
 #: tform1.caption
-#, fuzzy
 msgctxt "tform1.caption"
 msgid "Калькулятор"
 msgstr "Calculator"
 
 #: tform1.menuitem1.caption
-#, fuzzy
 msgctxt "tform1.menuitem1.caption"
 msgid "Калькулятор"
 msgstr "Calculator"
 
 #: tform1.menuitem10.caption
-#, fuzzy
 msgctxt "tform1.menuitem10.caption"
 msgid "Язык"
 msgstr "Language"
 
 #: tform1.menuitem11.caption
-#, fuzzy
 msgctxt "tform1.menuitem11.caption"
 msgid "Русский"
 msgstr "Russian"
 
 #: tform1.menuitem12.caption
-#, fuzzy
 msgctxt "tform1.menuitem12.caption"
 msgid "Английский"
 msgstr "English"
 
 #: tform1.menuitem2.caption
-#, fuzzy
 msgctxt "tform1.menuitem2.caption"
 msgid "Режим"
 msgstr "Mode"
 
 #: tform1.menuitem3.caption
-#, fuzzy
 msgctxt "tform1.menuitem3.caption"
 msgid "Справка"
 msgstr "Help"
 
 #: tform1.menuitem4.caption
-#, fuzzy
 msgctxt "tform1.menuitem4.caption"
 msgid "Копировать"
 msgstr "Copy"
 
 #: tform1.menuitem5.caption
-#, fuzzy
 msgctxt "tform1.menuitem5.caption"
 msgid "Вставить"
 msgstr "Paste"
 
 #: tform1.menuitem6.caption
-#, fuzzy
 msgctxt "tform1.menuitem6.caption"
 msgid "Базовый"
 msgstr "Base"
 
 #: tform1.menuitem7.caption
-#, fuzzy
 msgctxt "tform1.menuitem7.caption"
 msgid "Расширенный"
 msgstr "Advanced"
 
 #: tform1.menuitem8.caption
-#, fuzzy
 msgctxt "tform1.menuitem8.caption"
 msgid "Справка"
 msgstr "Help"
 
 #: tform1.menuitem9.caption
-#, fuzzy
 msgctxt "tform1.menuitem9.caption"
 msgid "О программе"
 msgstr "About"
@@ -330,7 +317,6 @@ msgid "log"
 msgstr ""
 
 #: tform2.button34.caption
-msgctxt "tform2.button34.caption"
 msgid "^"
 msgstr ""
 
@@ -456,4 +442,14 @@ msgstr ""
 #: tform2.radiobutton7.caption
 msgid "Oct"
 msgstr ""
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr "Help"
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "О программе"
+msgstr "About"
 

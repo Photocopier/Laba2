@@ -317,7 +317,6 @@ msgid "log"
 msgstr ""
 
 #: tform2.button34.caption
-msgctxt "tform2.button34.caption"
 msgid "^"
 msgstr ""
 
@@ -442,5 +441,15 @@ msgstr ""
 
 #: tform2.radiobutton7.caption
 msgid "Oct"
+msgstr ""
+
+#: tform3.caption
+msgctxt "tform3.caption"
+msgid "Справка"
+msgstr ""
+
+#: tform4.caption
+msgctxt "tform4.caption"
+msgid "О программе"
 msgstr ""
 

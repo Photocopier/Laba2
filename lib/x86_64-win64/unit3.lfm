@@ -1,0 +1,9 @@
+object Form3: TForm3
+  Left = 951
+  Height = 300
+  Top = 316
+  Width = 400
+  Caption = 'Справка'
+  DesignTimePPI = 120
+  LCLVersion = '2.0.6.0'
+end

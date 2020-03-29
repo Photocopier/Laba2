@@ -5,7 +5,8 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus, Math,LCLTranslator;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ActnList, Menus, Buttons, ExtCtrls, Grids, LCLIntf, ComCtrls,
+  ShellAPI, Windows, Math, LCLTranslator, Unit3, Unit4;
 
 type
 
@@ -94,17 +95,27 @@ type
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);
+    procedure MenuItem8Click(Sender: TObject);
+    procedure MenuItem9Click(Sender: TObject);
+    procedure RadioButton1Change(Sender: TObject);
+    procedure RadioButton2Change(Sender: TObject);
+    procedure RadioButton3Change(Sender: TObject);
+    procedure RadioButton4Change(Sender: TObject);
+    procedure RadioButton5Change(Sender: TObject);
+    procedure RadioButton6Change(Sender: TObject);
+    procedure RadioButton7Change(Sender: TObject);
 
   private
 
   public
 
   end;
-
+    const digit:string[16]='0123456789ABCDEF'; //цифры в СС 2-16
 var
   Form2: TForm2;
   a, b, c: Real;
   znak: String;
+  n: integer;
 
 implementation
 
@@ -112,6 +123,14 @@ implementation
 
 { TForm2 }
 uses Unit1;
+function FromDec(n,r:integer):string;
+begin
+result:='';
+repeat
+result:=digit[(n mod r)+1]+result;
+n:=n div r;
+until n=0;
+end;
 
 procedure TForm2.ClickBut(Sender: TObject);
 begin
@@ -152,6 +171,67 @@ begin
   Form1.Show;
  Form2.Hide;
 end;
+//справка
+procedure TForm2.MenuItem8Click(Sender: TObject);
+begin
+  Form3.Show;
+end;
+//о программе
+procedure TForm2.MenuItem9Click(Sender: TObject);
+begin
+  Form4.Show;
+end;
+//двоичная
+procedure TForm2.RadioButton1Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,2);
+  n:=0;
+end;
+//троичная
+procedure TForm2.RadioButton2Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,3);
+  n:=0;
+end;
+//четвертичная
+procedure TForm2.RadioButton3Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,4);
+  n:=0;
+end;
+//пятеричная
+procedure TForm2.RadioButton4Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,5);
+  n:=0;
+end;
+//шестиричная
+procedure TForm2.RadioButton5Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,6);
+  n:=0;
+end;
+//семеричная
+procedure TForm2.RadioButton6Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,7);
+  n:=0;
+end;
+
+//восьмиричная
+procedure TForm2.RadioButton7Change(Sender: TObject);
+begin
+  n:=StrToInt(Edit1.Text);
+  Form2.Edit1.Text:=FromDec(n,8);
+  n:=0;
+end;
+
 //Копировать
 procedure TForm2.MenuItem4Click(Sender: TObject);
 begin
