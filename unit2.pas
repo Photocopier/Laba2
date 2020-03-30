@@ -48,12 +48,17 @@ type
     Button24: TButton;
     Button25: TButton;
     Edit1: TEdit;
+    Label1: TLabel;
 
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
     MenuItem11: TMenuItem;
     MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
+    MenuItem15: TMenuItem;
+    MenuItem16: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -139,12 +144,9 @@ end;
 
 procedure TForm2.ClickZnak(Sender: TObject);
 begin
-  //нужно сделать так, чтобы если '-' нажимается раньше цифры, то выводить его
- //if a<>null then
  a:=StrToFloat(Edit1.Text);
  Form2.Edit1.Clear;
  znak:=(Sender as TButton). Caption;
- //else b:=b;
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);
@@ -154,17 +156,16 @@ begin
   Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
+//Русский
 procedure TForm2.MenuItem11Click(Sender: TObject);
 begin
    SetDefaultLang('ru', 'lang');
 end;
-
+//Английский
 procedure TForm2.MenuItem12Click(Sender: TObject);
 begin
     SetDefaultLang('en', 'lang');
 end;
-
 //Базовый
 procedure TForm2.MenuItem6Click(Sender: TObject);
 begin
@@ -185,53 +186,51 @@ end;
 procedure TForm2.RadioButton1Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,2);
+  Form2.Label1.Caption:=FromDec(n,2);
   n:=0;
 end;
 //троичная
 procedure TForm2.RadioButton2Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,3);
+  Form2.Label1.Caption:=FromDec(n,3);
   n:=0;
 end;
 //четвертичная
 procedure TForm2.RadioButton3Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,4);
+  Form2.Label1.Caption:=FromDec(n,4);
   n:=0;
 end;
 //пятеричная
 procedure TForm2.RadioButton4Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,5);
+  Form2.Label1.Caption:=FromDec(n,5);
   n:=0;
 end;
 //шестиричная
 procedure TForm2.RadioButton5Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,6);
+  Form2.Label1.Caption:=FromDec(n,6);
   n:=0;
 end;
 //семеричная
 procedure TForm2.RadioButton6Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,7);
+  Form2.Label1.Caption:=FromDec(n,7);
   n:=0;
 end;
-
 //восьмиричная
 procedure TForm2.RadioButton7Change(Sender: TObject);
 begin
   n:=StrToInt(Edit1.Text);
-  Form2.Edit1.Text:=FromDec(n,8);
+  Form2.Label1.Caption:=FromDec(n,8);
   n:=0;
 end;
-
 //Копировать
 procedure TForm2.MenuItem4Click(Sender: TObject);
 begin
@@ -242,7 +241,6 @@ procedure TForm2.MenuItem5Click(Sender: TObject);
 begin
   Form2.Edit1.PasteFromClipboard;
 end;
-
 //C
 procedure TForm2.Button22Click(Sender: TObject);
 begin
@@ -251,25 +249,19 @@ begin
   b:=0;
   c:=0;
 end;
-
 // CE
 procedure TForm2.Button21Click(Sender: TObject);
 begin
    Edit1.Clear;
 end;
-
 // %
 procedure TForm2.Button20Click(Sender: TObject);
 begin
- //процент не работает
   a:=StrToFloat(Edit1.Text);
-  if a<>null then
-  a:=a/b*100
-  else a:=b/100 ;
-  Form2.Edit1.Text:=IntToStr(round(a));
+  a:=a/100;
+  Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 // <-
 procedure TForm2.Button23Click(Sender: TObject);
 var
@@ -283,12 +275,11 @@ end;
 // Корень
 procedure TForm2.Button25Click(Sender: TObject);
 begin
-a:=StrToFloat(Form2.Edit1.Text);
-a:=sqrt(a);
-Form2.Edit1.Text:=FloatToStr(a);
-a:=0;
+  a:=StrToFloat(Form2.Edit1.Text);
+  a:=sqrt(a);
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
 end;
-
 //модуль
 procedure TForm2.Button30Click(Sender: TObject);
 begin
@@ -297,7 +288,7 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
+//ln
 procedure TForm2.Button32Click(Sender: TObject);
 begin
   a:=StrToFloat(Edit1.Text);
@@ -305,7 +296,7 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
+//log
 procedure TForm2.Button33Click(Sender: TObject);
 begin
   a:=StrToFloat(Edit1.Text);
@@ -313,7 +304,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 // =
 procedure TForm2.Button16Click(Sender: TObject);
 begin
@@ -331,17 +321,12 @@ end;
 // -
 procedure TForm2.Button19Click(Sender: TObject);
 begin
-  //работает только на положительное число
-  {
-  a:=StrToFloat(Edit1.Text);
-  if a<>0 then begin
-  if a=a then a:=-a
-  else '-'a:=a;
+  if Edit1.Text <> '0' then
+  begin
+    if Edit1.Text[1] = '-' then Edit1.Text := RightStr(Edit1.Text, Length(Edit1.Text) - 1)
+    else Edit1.Text := '-' + Edit1.Text;
   end;
-  Edit1.Text:=FloatToStr(a);
-  a:=0; }
 end;
-
 // x^2
 procedure TForm2.Button11Click(Sender: TObject);
 begin
@@ -350,7 +335,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 // 1/x
 procedure TForm2.Button10Click(Sender: TObject);
 begin
@@ -359,7 +343,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 //sin
 procedure TForm2.Button12Click(Sender: TObject);
 begin
@@ -368,7 +351,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 //cos
 procedure TForm2.Button26Click(Sender: TObject);
 begin
@@ -377,7 +359,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 //tg
 procedure TForm2.Button27Click(Sender: TObject);
 begin
@@ -386,7 +367,6 @@ begin
   Form2.Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
-
 //ctg
 procedure TForm2.Button28Click(Sender: TObject);
 begin
@@ -396,12 +376,22 @@ begin
   a:=0;
 end;
 
+function Fact(N: double): double;
+begin
+  if N > 1 then
+    Fact := N * Fact(N - 1)
+  else
+    Fact := 1;
+end;
+
 //факториал
 procedure TForm2.Button31Click(Sender: TObject);
   begin
-
+  a:=StrToFloat(Edit1.Text);
+  a:=Fact(a);
+  Form2.Edit1.Text:=FloatToStr(a);
+  a:=0;
   end;
-
 
 end.
 

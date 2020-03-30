@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 963
+  Left = 881
   Height = 530
-  Top = 175
+  Top = 123
   Width = 441
   Caption = 'Калькулятор'
   ClientHeight = 505
@@ -11,13 +11,13 @@ object Form1: TForm1
   LCLVersion = '2.0.6.0'
   object Edit1: TEdit
     Left = 10
-    Height = 45
+    Height = 46
     Top = 24
     Width = 426
     Alignment = taRightJustify
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -28
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -59,7 +59,7 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Button3: TButton
-    Left = 183
+    Left = 182
     Height = 75
     Top = 328
     Width = 75
@@ -95,7 +95,7 @@ object Form1: TForm1
   object Button5: TButton
     Left = 95
     Height = 75
-    Top = 248
+    Top = 250
     Width = 75
     Caption = '5'
     Font.CharSet = ANSI_CHARSET
@@ -110,7 +110,7 @@ object Form1: TForm1
     TabOrder = 5
   end
   object Button6: TButton
-    Left = 183
+    Left = 182
     Height = 75
     Top = 248
     Width = 75
@@ -161,7 +161,7 @@ object Form1: TForm1
     TabOrder = 8
   end
   object Button9: TButton
-    Left = 183
+    Left = 182
     Height = 75
     Top = 168
     Width = 75
@@ -212,7 +212,7 @@ object Form1: TForm1
     TabOrder = 11
   end
   object Button12: TButton
-    Left = 543
+    Left = 542
     Height = 75
     Top = 80
     Width = 75
@@ -264,7 +264,7 @@ object Form1: TForm1
   object Button15: TButton
     Left = 271
     Height = 75
-    Top = 408
+    Top = 410
     Width = 75
     Caption = '+'
     Font.CharSet = ANSI_CHARSET
@@ -296,7 +296,7 @@ object Form1: TForm1
     TabOrder = 16
   end
   object Button17: TButton
-    Left = 183
+    Left = 182
     Height = 75
     Top = 408
     Width = 75
@@ -381,7 +381,7 @@ object Form1: TForm1
     TabOrder = 21
   end
   object Button22: TButton
-    Left = 183
+    Left = 180
     Height = 75
     Top = 88
     Width = 75
@@ -432,7 +432,7 @@ object Form1: TForm1
     TabOrder = 24
   end
   object Button25: TButton
-    Left = 271
+    Left = 270
     Height = 75
     Top = 88
     Width = 75
@@ -492,6 +492,18 @@ object Form1: TForm1
       object MenuItem12: TMenuItem
         Caption = 'Английский'
         OnClick = MenuItem12Click
+      end
+    end
+    object MenuItem13: TMenuItem
+      Caption = 'Оформление'
+      object MenuItem14: TMenuItem
+        Caption = 'Тема 1'
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Тема 2'
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'Детская'
       end
     end
   end

@@ -5,10 +5,16 @@ unit Unit4;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TForm4 }
+
   TForm4 = class(TForm)
+    Label1: TLabel;
+    Memo1: TMemo;
+    Memo2: TMemo;
   private
 
   public

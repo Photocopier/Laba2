@@ -150,6 +150,26 @@ msgctxt "tform1.menuitem12.caption"
 msgid "Английский"
 msgstr "English"
 
+#: tform1.menuitem13.caption
+msgctxt "tform1.menuitem13.caption"
+msgid "Оформление"
+msgstr "Design"
+
+#: tform1.menuitem14.caption
+msgctxt "tform1.menuitem14.caption"
+msgid "Тема 1"
+msgstr "Theme 1"
+
+#: tform1.menuitem15.caption
+msgctxt "tform1.menuitem15.caption"
+msgid "Тема 2"
+msgstr "Theme 2"
+
+#: tform1.menuitem16.caption
+msgctxt "tform1.menuitem16.caption"
+msgid "Детская"
+msgstr "Baby"
+
 #: tform1.menuitem2.caption
 msgctxt "tform1.menuitem2.caption"
 msgid "Режим"
@@ -375,6 +395,26 @@ msgctxt "tform2.menuitem12.caption"
 msgid "Английский"
 msgstr "English"
 
+#: tform2.menuitem13.caption
+msgctxt "tform2.menuitem13.caption"
+msgid "Оформление"
+msgstr "Design"
+
+#: tform2.menuitem14.caption
+msgctxt "tform2.menuitem14.caption"
+msgid "Тема 1"
+msgstr "Theme 1"
+
+#: tform2.menuitem15.caption
+msgctxt "tform2.menuitem15.caption"
+msgid "Тема 2"
+msgstr "Theme 2"
+
+#: tform2.menuitem16.caption
+msgctxt "tform2.menuitem16.caption"
+msgid "Детская"
+msgstr "Baby"
+
 #: tform2.menuitem2.caption
 msgctxt "tform2.menuitem2.caption"
 msgid "Режим"
@@ -452,4 +492,8 @@ msgstr "Help"
 msgctxt "tform4.caption"
 msgid "О программе"
 msgstr "About"
+
+#: tform4.label1.caption
+msgid "Программа: Calculator v 1.0"
+msgstr ""
 

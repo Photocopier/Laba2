@@ -14,6 +14,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Button12: TButton;
     Edit1: TEdit;
     Button1: TButton;
     Button2: TButton;
@@ -45,6 +46,10 @@ type
     MenuItem10: TMenuItem;
     MenuItem11: TMenuItem;
     MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
+    MenuItem15: TMenuItem;
+    MenuItem16: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
@@ -96,12 +101,9 @@ end;
 
 procedure TForm1.ClickZnak(Sender: TObject);
 begin
-  //нужно сделать так, чтобы если '-' нажимается раньше цифры, то выводить его
- //if a<>null then
  a:=StrToFloat(Edit1.Text);
  Edit1.Clear;
  znak:=(Sender as TButton). Caption;
- //else b:=b;
 end;
 
 procedure TForm1.MenuItem11Click(Sender: TObject);
@@ -144,12 +146,10 @@ end;
 // %
 procedure TForm1.Button20Click(Sender: TObject);
 begin
- //процент не работает
+  //b := StrToFloat(Edit1.Text)* a * 0.01;
   a:=StrToFloat(Edit1.Text);
-  if a<>null then
-  a:=a/b*100
-  else a:=b/100 ;
-  Edit1.Text:=IntToStr(round(a));
+  a:=a/100;
+  Edit1.Text:=FloatToStr(a);
   a:=0;
 end;
 // CE
@@ -199,15 +199,11 @@ end;
 // -
 procedure TForm1.Button19Click(Sender: TObject);
 begin
-  //работает только на положительное число
-  {
-  a:=StrToFloat(Edit1.Text);
-  if a<>0 then begin
-  if a=a then a:=-a
-  else '-'a:=a;
+  if Edit1.Text <> '0' then
+  begin
+    if Edit1.Text[1] = '-' then Edit1.Text := RightStr(Edit1.Text, Length(Edit1.Text) - 1)
+    else Edit1.Text := '-' + Edit1.Text;
   end;
-  Edit1.Text:=FloatToStr(a);
-  a:=0; }
 end;
 // x^2
 procedure TForm1.Button11Click(Sender: TObject);
